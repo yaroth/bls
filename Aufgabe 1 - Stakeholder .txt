@@ -2,3 +2,6 @@
 - öV Reisender: kann einfach eine Sitzplatzreservation vornehmen.
 - BLS: weiss wer an einer Sitzplatzreservation interessiert ist.
 - BLS: kann bei GA-Besitzer herausfinden, wer wohin fährt. -> User-Verhalten
+
+test
+
