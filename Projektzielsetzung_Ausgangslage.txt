@@ -1,0 +1,11 @@
+3 Projektzielsetzung
+
+3.1 Ausgangslage:
+
+	Die BLS AG ist eine Bahngessellschaft, die millionen von Passagieren jährlich transportiert.
+	Viele Fahrgäste haben deshalb auch das Bedürfniss einen Sitzplatz für Ihre Fahrt zu reservieren.
+	Jedoch kann der Fahrgast momentan eine Sitzplatzreservation nur am Schalter tätigen.
+
+	Die BLS will deshalb ihr Angebot erweitern, indem sie ihren Passagieren eine möglichkeit
+	anbietet zusätzlich zur Fahrt eigene feste Sitzplätze zu reservieren für einen fixen Preis.
+	Die Reservation soll einfach und schnell gehen und dies ohne zum Schalter gehen zu müssen.
