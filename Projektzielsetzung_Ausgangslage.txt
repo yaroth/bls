@@ -9,3 +9,13 @@
 	Die BLS will deshalb ihr Angebot erweitern, indem sie ihren Passagieren eine möglichkeit
 	anbietet zusätzlich zur Fahrt eigene feste Sitzplätze zu reservieren für einen fixen Preis.
 	Die Reservation soll einfach und schnell gehen und dies ohne zum Schalter gehen zu müssen.
+
+3.3 Projektziele:
+
+	BLS
+	Ziel der BLS ist es eine Applikation zu haben, mit der die Fahrgäste alleine
+	Sitzplätze reservieren können 
+
+	ÖV-Reisender
+	Für den Reisenden ist es wichtig eine einfache und intuitive Applikation zu haben,
+	mit der schnell und wenn möglich Ortsunabhängig die Sitzplätze reservierbar sind.
