@@ -1,0 +1,17 @@
+1	Vision
+Kurzbeschreibung, was mit dem Projekt erreicht werden soll (ca. 3 – 5 Sätze) 
+•	Was ist das Produkt oder der Service, der/die als Projektergebnis geliefert wird?
+•	Welcher Hauptnutzen wird für welche Zielgruppe angestrebt?
+•	Was wird durch das Projekt verändert? 
+•	Wird ein neues Geschäftsmodell geschaffen?
+
+2	Projektzielsetzung
+2.1	Ausgangslage
+•	Wie sieht die aktuelle Situation aus?
+•	Welche Probleme will man lösen?
+2.2	Stakeholder
+•	Welches sind die relevanten Stakeholder des Projekts?
+
+2.3	Projektziele
+	•	Was sind ihre jeweiligen Ziele, die die Stakeholder mit dem Projekt erreichen wollen? 
+	•	Evtl. auch NICHT-Ziele, die bewusst nicht angestrebt werden
