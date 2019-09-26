@@ -1,0 +1,30 @@
+Projektziele für Herr Lang 
+
+Use case 1:
+Der Fahrgast hat im voraus ein Fahrticket für eine längere Fahrt gekauft. 
+Später entscheidet er sich, dass er gerne einen Sitzplatz reservieren möchte.
+Er verwendet die Applikation, gibt seine Fahrstrecke an und wählt den Sitzplaz anhand 
+der im angezeigten möglichkeiten der bestehenden Wagons. Er bezahlt online den Preis 
+für die Reservation und kann sich eine Bestätigung der Reservation Ausdrucken.
+
+
+Use case 2:
+Der Fahrgast hat vor einigen Minuten sein Fahrticket für die Strecke Bern-Interlaken gekauft.
+Später am Perron fällt im ein, dass der Zug für diese Strecke sehr voll wird. Er entscheidet 
+sich kurzer Hand einen Sitzplaz zu reservieren. Mit der Applikation im Smartphone gibt er 
+seine Fahrt an und sieht welche Plätze noch frei sind, reserviert sich seinen Sitzplaz
+und bezahlt online die Reservation. Er erhält eine Bestätigung der Reservation
+und die App erstellt einen QR-Code, der als Bestätigung dem Kontrolleur gezeigt werden kann.
+
+
+Use case 3:
+Der Fahrgast hat bereits ein bezahltes Abo für seine langen Zugfahrten auf seinem Arbeitsweg.
+Auf der Arbeit hat er noch etwas zu erledigen und will das vorherh im Zug auf seinem Laptop 
+machen, weiss aber nicht ob es freie Sitzplätze gibt. Die Applikation auf seinem Smartphone 
+meldet sich mit einer Notification und fragt ob er für seine anstehende Fahrt auf Perron XY von
+Zürich - Bern gerne einen Sitzplatz reservieren möchte.
+
+(Die Applikation weiss auf welchem Perron der Fahrgst steht)
+
+Der Fahrgast öffnet die Applikation und reserviert sich seinen Sitzplatz, bezahlt online und
+erhält seine online Bestätigung in Form eines QR-Codes.
