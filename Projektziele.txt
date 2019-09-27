@@ -65,6 +65,7 @@ Zu klären:
 - ist ein Sitzplatz reserviert, sollte für andere Reisende ersichtlich sein, auf welcher Strecke dies der Fall ist. -> Sitzplatzreservationsanzeige im Zug.
 - was passiert wenn ein Sitzplatz reserviert wurde, die Reisende aber nicht erscheint? Ab wann ist ein reservierter, nichtbenutzter Sitzplatz "wieder frei"?
 - kann ein reservierter Sitzplatz jemand anderem übergeben, verschenkt, verkauft werden?
+- Kann ein reservierter Sitzplatz Rückerstattet werden falls die Fahrt annuliert wird oder der Fahrgast sich es anders überlegt?
 - bis zu wie viele Sitzplätze kann EINE Reservation umfassen? Darf eine Reisende für 10 "Freunde" Plätze reservieren?
 - Was für Eigenschaften kann man bei der Reservation angeben? - z.B. in Fahrtrichtung, Fensterplatz, Familienabteil, in Wagen mit Veloplatz, mit 220V Steckdosenanschluss,...
 
