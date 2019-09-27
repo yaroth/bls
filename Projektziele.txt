@@ -14,39 +14,46 @@ Stakeholder
 - kann einfach eine Sitzplatzreservation vornehmen.
 BLS: 
 - weiss wer an einer Sitzplatzreservation interessiert ist.
-- kann bei GA-Besitzer herausfinden, wer wohin fährt. -> User-Verhalten
+- weiss wann für welche Reisen Reservationen getätigt werden.
+- kann bei Abo-Besitzer herausfinden, wer wohin fährt. -> User-Verhalten
 
 
 Projektziele
 Ziel ist es, eine Applikation zu erstellen, die einfach, schnell, zuverlässig und benutzerfreundlich einem öV-Reisenden ermöglicht, eine Sitzplatzreservation vorzunehmen.
  
 
-Use case 1: Ticket lange vorhanden - zusätzlich Sitzplatz
+Use case 1: Ticket lange vorhanden - zusätzlich Sitzplatzreservation
 Ausgangslage: Der Fahrgast hat im voraus ein Fahrticket für eine längere Fahrt gekauft. 
-Handlung: Später entscheidet er sich, einen Sitzplatz zu reservieren.
-Er verwendet die Applikation, gibt seine Fahrstrecke an und wählt den Sitzplatz anhand 
-der ihm angezeigten Möglichkeiten in den aktuellen Wagons. Er bezahlt 
-für die Reservation und erhält eine Bestätigung.
+Handlung: Später entscheidet er sich, einen Sitzplatz zu reservieren. Er verwendet die Applikation, gibt seine Fahrstrecke und den Zeitpunkt an und wählt den Sitzplatz anhand der ihm angezeigten Möglichkeiten in den aktuellen Wagons. Er bezahlt für die Reservation und erhält eine Bestätigung.
 
 
 Use case 2: Ticket eben gekauft - viele Leute - Sitzplatz reservieren
 Ausgangslage: Der Fahrgast hat vor einigen Minuten sein Fahrticket für die Strecke Bern-Interlaken gekauft.
-Handlung: Später am Perron fällt ihm ein, dass der Zug für diese Strecke sehr voll sein wird. Er entscheidet 
-sich kurzer Hand einen Sitzplatz zu reservieren. Mit der Applikation im Smartphone gibt er 
-seine Fahrt an und sieht welche Plätze noch frei sind, reserviert seinen Sitzplatz
-und bezahlt. Er erhält eine Bestätigung der Reservation.
+Handlung: Später am Perron fällt ihm ein, dass der Zug für diese Strecke sehr voll sein wird. Er entscheidet sich kurzer Hand einen Sitzplatz zu reservieren. Mit der Applikation im Smartphone gibt er seine Fahrt an und sieht welche Plätze noch frei sind, reserviert seinen Sitzplatz und bezahlt. Er erhält eine Bestätigung der Reservation.
 
 
-Use case 3: Abo - Arbeitsplatz-Reservation
+Use case 3: Abo - geolocation-basierter Reservation-Vorschlag durch Applikation
 Ausgangslage: Der Fahrgast besitzt ein Streckenabo für seinen Arbeitsweg.
-Handlung: Auf der Arbeit hat er noch etwas zu erledigen und will das vorher im Zug auf seinem Laptop 
-machen, weiss aber nicht, ob es noch freie (Arbeits-)Sitzplätze gibt. Auf dem Perron fragt die Applikation, ob die Kundin eine Sitzplatzreservation vornehmen will. Sie öffnet die Applikation und reserviert einen Sitzplatz, bezahlt und
-erhält eine Bestätigung.
+Handlung: Er möchte im Zug auf seinem Laptop noch arbeiten, weiss aber nicht, ob es noch freie (Arbeits-)Sitzplätze gibt. Auf dem Perron fragt die Applikation, ob er eine Sitzplatzreservation vornehmen will. Er öffnet die Applikation und reserviert einen Sitzplatz, bezahlt und erhält eine Bestätigung.
 
 
 Use case 4: mit Ticket im Zug - nachträgliche Reservation
 Ausgangslage: Reisende sitzt im Zug und sieht, dass keine Sitzplätze mehr frei sind. 
 Handlung: sie sucht mit der Applikation einen nicht reservierten Sitzplatz (jetzt oder ab einer späteren Haltestelle) und bucht diesen.
+
+
+Use case 5: mit Ticket im Zug - Reservation des aktuellen Sitzplatzes
+Ausgangslage: Reisende sitzt im Zug und möchten den Sitzplatz, auf dem sie sitzt, reservieren. 
+Handlung: in der Applikation klickt sie auf "aktuellen Sitzplatz" reservieren, zahlt & erhält eine Bestätigung.
+
+
+
+Weiterführende Gedanken
+Heute besteht meistens ein friedliches Miteinander beim Reisen in den Zügen. Man steht für Gebrechliche, Alte, Schwangere, Eltern mit Kleinkindern,... auf und überlässt seinen Sitzplatz. Auch wenn dies nicht immer und überall problemlos passiert, so kann man doch sagen, dass das Zusammenreisen eher friedlich verläuft.
+Mit der flächendeckenden Einführung eines Sitzplatzreservationssystem besteht die Gefahr, dass man vehementer auf seinem Recht beharrt, einen Sitzplatz "gekauft" zu haben. 
+Auch werden - je nach gewählter Applikationstechnologie - Leute diskriminiert, die keinen Zugang zum Reservationssystem haben oder dieses nicht zu benutzen wissen.
+Es könnte aber auch sein, dass eine Sitzplatzreservation Konflikte vermeidet, da klar ist, wer den Sitzplatz reserviert hat. 
+Siehe auch Punkt "Zu klären" weiter unten...
 
 
 Zu klären:
@@ -55,14 +62,9 @@ Zu klären:
 - ist die Applikation eine Webapp (browserbasiert) oder native?
 - wird die Applikation in eine bestehende Applikation eingebaut? (z.B. in Lezzgo?) -> Sitzplatzreservation beim Ticketkauf als Option anbieten.
 - wie wird anderen Reisenden im Wagon angezeigt, dass ein Platz reserviert ist? 
-- ist ein Sitzplatz reserviert, sollte für andere Reisende ersichtlich sein, wann dies auf welcher Strecke gültig ist. -> Sitzplatzreservationsanzeige im Zug.
+- ist ein Sitzplatz reserviert, sollte für andere Reisende ersichtlich sein, auf welcher Strecke dies der Fall ist. -> Sitzplatzreservationsanzeige im Zug.
 - was passiert wenn ein Sitzplatz reserviert wurde, die Reisende aber nicht erscheint? Ab wann ist ein reservierter, nichtbenutzter Sitzplatz "wieder frei"?
-
-Weiterführende Gedanken
-Heute besteht meistens ein friedliches Miteinander beim Reisen in den Zügen. Man steht für Gebrechliche, Alte, Schwangere, Eltern mit Kleinkindern,... auf und überlässt seinen Sitzplatz. Auch wenn dies nicht immer und überall problemlos passiert, so kann man doch sagen, dass das Zusammenreisen eher friedlich verläuft.
-Mit der flächendeckenden Einführung eines Sitzplatzreservationssystem besteht die Gefahr, dass man vehementer auf seinem Recht beharrt, einen Sitzplatz "gekauft" zu haben. 
-Auch werden - je nach gewählter Applikationstechnologie - Leute diskriminiert, die keinen Zugang zum Reservationssystem haben oder dieses nicht zu benutzen wissen.
-Es könnte aber auch sein, dass eine Sitzplatzreservation Konflikte vermeidet, da klar ist wer den Sitzplatz reserviert hat. 
-
-
+- kann ein reservierter Sitzplatz jemand anderem übergeben, verschenkt, verkauft werden?
+- bis zu wie viele Sitzplätze kann EINE Reservation umfassen? Darf eine Reisende für 10 "Freunde" Plätze reservieren?
+- Was für Eigenschaften kann man bei der Reservation angeben? - z.B. in Fahrtrichtung, Fensterplatz, Familienabteil, in Wagen mit Veloplatz, mit 220V Steckdosenanschluss,...
 
