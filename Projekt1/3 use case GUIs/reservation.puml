@@ -6,7 +6,7 @@ if (Papierticket?) then (Ja)
     use case 1,2,4
   end note
   :Anfrage Zugservices
-  - von, bis, Zeit wählen;
+  - von, bis, Zeit angeben;
   :Zugservice wählen;
 else (Nein)
   :Digitales Ticket;
@@ -17,8 +17,7 @@ else (Nein)
        use case 1,2,3,4
      end note
      :Anfrage Zugservices
-     - für vorgegebene Strecke
-     - Zeit wählen;
+     - Zeit angeben;
      :Zugservice wählen;
    else (Ja)
      :Digitales Sparticket
@@ -28,6 +27,7 @@ else (Nein)
      end note
    endif
 endif
+   :Wagen wählen;
 repeat
     :Sitzplatz wählen;
     note left
