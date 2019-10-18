@@ -1,0 +1,15 @@
+@startuml
+|Swimlane1|
+start
+if (Papierticket?) then (Ja)
+  :Papierticket;
+else (Nein)
+  :Digitalticket;
+  if (Sparticket?) then (Ja)
+     :Sparticket;
+   else (Nein)
+     :Normales Ticket;
+   endif
+endif
+stop
+@enduml
