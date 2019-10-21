@@ -1,6 +1,0 @@
-3.2 Welches sind die relevanten Stakeholder des Projekts? 
-- öV Reisender: kann einfach eine Sitzplatzreservation vornehmen.
-- BLS: weiss wer an einer Sitzplatzreservation interessiert ist.
-- BLS: kann bei GA-Besitzer herausfinden, wer wohin fährt. -> User-Verhalten
-
-
