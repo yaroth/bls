@@ -3,7 +3,7 @@ start
 if (Papierticket?) then (Ja)
   :Papierticket;
   note left
-    use case 1,2,4
+    use case 1
   end note
   :Anfrage Zugservices
   - von, bis, Zeit angeben;
@@ -14,7 +14,7 @@ else (Nein)
      :Digitales Ticket
      - streckengebunden;
      note left
-       use case 1,2,3,4
+       use case 1,2,3
      end note
      :Anfrage Zugservices
      - Zeit angeben;
@@ -23,7 +23,7 @@ else (Nein)
      :Digitales Sparticket
      - zugservicegebunden;
      note right
-        use case 1,2,3,4
+        use case 1,2,3
      end note
    endif
 endif
@@ -31,7 +31,7 @@ endif
 repeat
     :Sitzplatz wählen;
     note left
-        use case 5
+        use case 4
     end note
 repeat while (Sitzplatz reserviert?)
 :Reservationsbestätigung \nerhalten;
