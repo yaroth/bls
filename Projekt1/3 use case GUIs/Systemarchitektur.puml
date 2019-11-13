@@ -1,0 +1,23 @@
+@startuml
+
+node "Server"{
+    node "Magnolia CMS" as mag{
+        [Admin]
+        [REST API] as rApi
+    }
+    database "JCR"
+}
+node "Browser"{
+
+    node "vue.js" as vue{
+        [Javasript Framework]
+    }
+}
+
+rApi -right-> vue : JSON
+vue -left-> rApi : REST
+vue ---- rApi
+mag -> JCR
+
+
+@enduml
