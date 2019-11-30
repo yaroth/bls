@@ -1,8 +1,8 @@
 @startuml
 
-node "Server"{
+node "Server (Apache Tomcat)"{
     node "Magnolia CMS" as mag{
-        [Admin]
+        [Backend]
         [REST API] as rApi
     }
     database "JCR"
@@ -10,7 +10,7 @@ node "Server"{
 node "Browser"{
 
     node "vue.js" as vue{
-        [Javasript Framework]
+        [Javascript Framework]
     }
 }
 
