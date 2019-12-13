@@ -1,0 +1,3 @@
+#class: info.magnolia.rest.service.node.definition.ConfiguredNodeEndpointDefinition
+class: info.magnolia.rest.registry.ConfiguredEndpointDefinition
+implementationClass: ch.yaro.bls.rest.service.v1.DemoEndpoint

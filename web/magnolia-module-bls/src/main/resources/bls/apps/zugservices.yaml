@@ -1,0 +1,470 @@
+label: Zugservices
+icon: icon-jcr-app
+appClass: info.magnolia.ui.contentapp.ContentApp
+class: info.magnolia.ui.contentapp.ConfiguredContentAppDescriptor
+subApps:
+  browser:
+    subAppClass: info.magnolia.ui.contentapp.browser.BrowserSubApp
+    class: info.magnolia.ui.contentapp.browser.BrowserSubAppDescriptor
+    label: Zugservices
+    actions:
+      addZugservice:
+        subAppId: detail
+        label: Add Zugservice
+        icon: icon-add-item
+        nodeType: zugservice
+        appName: zugservices
+        class: info.magnolia.ui.contentapp.detail.action.CreateItemActionDefinition
+        availability:
+          writePermissionRequired: true
+          root: true
+          nodeTypes:
+            folder: mgnl:folder
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      editZugservice:
+        subAppId: detail
+        label: Edit Zugservice
+        icon: icon-edit
+        appName: zugservices
+        class: info.magnolia.ui.contentapp.detail.action.EditItemActionDefinition
+        availability:
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+          nodeTypes:
+            zugservice: zugservice
+      duplicateZugservice:
+        label: Duplicate Zugservice
+        class: info.magnolia.ui.framework.action.DuplicateNodeActionDefinition
+        icon: icon-duplicate
+        availability:
+          rules:
+            IsNotDeletedRule:
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      move:
+        icon: icon-move
+        class: info.magnolia.ui.contentapp.movedialog.action.OpenMoveDialogActionDefinition
+        availability:
+          multiple: true
+          properties: true
+      delete:
+        command: markAsDeleted
+        class: info.magnolia.ui.framework.action.MarkNodeAsDeletedActionDefinition
+        availability:
+          writePermissionRequired: true
+      addFolder:
+        icon: icon-add-folder
+        class: info.magnolia.ui.framework.action.AddFolderActionDefinition
+        availability:
+          writePermissionRequired: true
+          root: true
+          nodeTypes:
+            - mgnl:folder
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      editFolder:
+        dialogName: ui-framework:folder
+        icon: icon-edit
+        class: info.magnolia.ui.framework.action.OpenEditDialogActionDefinition
+        availability:
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      renameZugservice:
+        icon: icon-edit
+        label: Rename Zugservice Item
+        dialogName: zugservices:renameZugservice
+        class: info.magnolia.ui.framework.action.OpenEditDialogActionDefinition
+        availability:
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      activate:
+        command: activate
+        icon: icon-publish
+        catalog: versioned
+        class: info.magnolia.ui.framework.action.ActivationActionDefinition
+        availability:
+          multiple: true
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      deactivate:
+        command: deactivate
+        icon: icon-unpublish
+        catalog: versioned
+        class: info.magnolia.ui.framework.action.DeactivationActionDefinition
+        availability:
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+            - name: IsPublishedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsPublishedRule
+      export:
+        command: export
+        icon: icon-export
+        class: info.magnolia.ui.framework.action.ExportActionDefinition
+        availability:
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      import:
+        icon: icon-import
+        dialogName: ui-admincentral:import
+        name: import
+        class: info.magnolia.ui.framework.action.OpenCreateDialogActionDefinition
+        availability:
+          writePermissionRequired: true
+          root: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      restorePreviousVersion:
+        icon: icon-undo
+        class: info.magnolia.ui.contentapp.detail.action.RestorePreviousVersionActionDefinition
+        availability:
+          writePermissionRequired: true
+          rules:
+            - name: IsDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsDeletedRule
+      activateDeleted:
+        command: activate
+        icon: icon-publish
+        catalog: versioned
+        class: info.magnolia.ui.framework.action.ActivationActionDefinition
+        availability:
+          writePermissionRequired: true
+          rules:
+            - name: IsDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsDeletedRule
+      confirmDeleteZugservice:
+        successActionName: delete
+        label: Delete
+        confirmationHeader: Do you really want to delete the selected item?
+        confirmationMessage: Deleting the selected item cannot be undone. Do you want to proceed?
+        proceedLabel: Delete
+        cancelLabel: Cancel
+        icon: icon-delete
+        class: info.magnolia.ui.framework.action.ConfirmationActionDefinition
+        availability:
+          multiple: true
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      confirmDeleteFolder:
+        icon: icon-delete
+        successActionName: delete
+        class: info.magnolia.ui.framework.action.ConfirmationActionDefinition
+        availability:
+          multiple: true
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      confirmDeleteItems:
+        icon: icon-delete
+        successActionName: delete
+        class: info.magnolia.ui.framework.action.ConfirmationActionDefinition
+        availability:
+          multiple: true
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      showVersions:
+        icon: icon-show-versions
+        class: info.magnolia.ui.contentapp.browser.action.ShowVersionsActionDefinition
+        availability:
+          rules:
+            - name: HasVersionsRule
+              implementationClass: info.magnolia.ui.framework.availability.HasVersionsRule
+      restoreVersion:
+        icon: icon-retrieve-versions
+        class: info.magnolia.ui.contentapp.browser.action.RestoreVersionActionDefinition
+        availability:
+          writePermissionRequired: true
+          rules:
+            - name: HasVersionsRule
+              implementationClass: info.magnolia.ui.framework.availability.HasVersionsRule
+
+    actionbar:
+      defaultAction: editZugservice
+      sections:
+        - name: root
+          label: Root
+          groups:
+            - name: addActions
+              items:
+                - name: addZugservice
+                - name: addFolder
+            - name: importExportActions
+              items:
+                - name: import
+          availability:
+            nodes: false
+            root: true
+        - name: deletedZugservice
+          groups:
+            - name: addActions
+              items:
+                - name: addZugservice
+                - name: confirmDeleteZugservice
+            - name: editActions
+              items:
+                - name: editZugservice
+                - name: renameZugservice
+            - name: activationActions
+              items:
+                - name: activateDeleted
+                - name: deactivate
+            - name: importExportActions
+              items:
+                - name: export
+            - name: deletedActions
+              items:
+                - name: restorePreviousVersion
+          availability:
+            nodeTypes:
+              zugservice: zugservice
+            rules:
+              - name: IsDeletedRule
+                implementationClass: info.magnolia.ui.framework.availability.IsDeletedRule
+        - name: deletedFolder
+          groups:
+            - name: addActions
+              items:
+                - name: addZugservice
+                - name: addFolder
+                - name: confirmDeleteFolder
+            - name: editActions
+              items:
+                - name: editFolder
+            - name: activationActions
+              items:
+                - name: activateDeleted
+                - name: deactivate
+            - name: importExportActions
+              items:
+                - name: export
+                - name: import
+            - name: deletedActions
+              items:
+                - name: restorePreviousVersion
+          availability:
+            nodeTypes:
+              mgnl-folder: mgnl:folder
+            rules:
+              - name: IsDeletedRule
+                implementationClass: info.magnolia.ui.framework.availability.IsDeletedRule
+        - name: zugservice
+          label: Zugservice
+          groups:
+            - name: addActions
+              items:
+                - name: addZugservice
+                - name: confirmDeleteZugservice
+            - name: editActions
+              items:
+                - name: editZugservice
+                - name: duplicateZugservice
+                - name: renameZugservice
+                - name: move
+            - name: activationActions
+              items:
+                - name: activate
+                - name: deactivate
+            - name: importExportActions
+              items:
+                - name: export
+            - name: versionsActions
+              items:
+                - name: showVersions
+                - name: restoreVersion
+          availability:
+            nodeTypes:
+              zugservice: zugservice
+        - name: folder
+          groups:
+            - name: addActions
+              items:
+                - name: addZugservice
+                - name: addFolder
+                - name: confirmDeleteFolder
+            - name: editActions
+              items:
+                - name: editFolder
+                - name: move
+            - name: activationActions
+              items:
+                - name: activate
+                - name: deactivate
+            - name: importExportActions
+              items:
+                - name: export
+                - name: import
+          availability:
+            nodeTypes:
+              mgnl-folder: mgnl:folder
+        - name: multiple
+          groups:
+            - name: deleteActions
+              items:
+                - name: confirmDeleteItems
+            - name: activationActions
+              items:
+                - name: activate
+                - name: deactivate
+            - name: importExportActions
+              items:
+                - name: export
+    workbench:
+      editable: false
+      contentViews:
+        - name: tree
+          class: info.magnolia.ui.workbench.tree.TreePresenterDefinition
+          columns: &myColumns
+            - name: jcrName
+              editable: true
+              sortable: true
+              propertyName: jcrName
+              expandRatio: 1.0
+              class: info.magnolia.ui.workbench.column.definition.PropertyColumnDefinition
+            - name: name
+              label: Name
+              editable: true
+              sortable: true
+              propertyName: name
+              expandRatio: 1.0
+              class: info.magnolia.ui.workbench.column.definition.PropertyColumnDefinition
+            - name: strecke
+              label: Strecke
+              editable: true
+              sortable: true
+              propertyName: strecke
+              expandRatio: 1.0
+              class: info.magnolia.ui.workbench.column.definition.PropertyColumnDefinition
+            - name: zugkomposition
+              label: Zugkomposition
+              editable: true
+              sortable: true
+              propertyName: zugkomposition
+              expandRatio: 1.0
+              class: info.magnolia.ui.workbench.column.definition.PropertyColumnDefinition
+            - name: status
+              width: 45
+              displayInChooseDialog: false
+              formatterClass: info.magnolia.ui.workbench.column.StatusColumnFormatter
+              class: info.magnolia.ui.workbench.column.definition.StatusColumnDefinition
+            - name: moddate
+              width: 160
+              sortable: true
+              displayInChooseDialog: false
+              formatterClass: info.magnolia.ui.workbench.column.DateColumnFormatter
+              propertyName: mgnl:lastModified
+              class: info.magnolia.ui.workbench.column.definition.MetaDataColumnDefinition
+        - name: list
+          class: info.magnolia.ui.workbench.list.ListPresenterDefinition
+          columns: *myColumns
+        - name: thumbnail
+          class: info.magnolia.ui.workbench.thumbnail.ThumbnailPresenterDefinition
+        - name: search
+          class: info.magnolia.ui.workbench.search.SearchPresenterDefinition
+          columns: *myColumns
+    imageProvider:
+     class: info.magnolia.dam.app.ui.imageprovider.DamLinkImageProviderDefinition
+     damLinkPropertyName: image
+    contentConnector:
+      includeProperties: false
+      workspace: zugservices
+      rootPath: /
+      defaultOrder: jcrName
+      nodeTypes:
+        - icon: icon-jcr-app
+          name: zugservice
+        - icon: icon-folder-l
+          name: mgnl:folder
+
+  detail:
+    subAppClass: info.magnolia.ui.contentapp.detail.DetailSubApp
+    class: info.magnolia.ui.contentapp.detail.DetailSubAppDescriptor
+    editor:
+      wide: true
+      nodeType:
+        icon: icon-jcr-app
+        name: zugservice
+      actions:
+        - name: commit
+        - name: cancel
+      form:
+        tabs:
+          - name: zugservice
+            label: Zugservice detail
+            fields:
+              - name: jcrName
+                label: Name
+                required: true
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+              - name: name
+                label: Name
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                validators:
+                  - name: name
+                    class: info.magnolia.ui.form.validator.definition.RegexpValidatorDefinition
+                    pattern: ^[a-zA-Z0-9\-\_\s]+$
+                    errorMessage: Format Error! Please enter letter, numbers, '-' and '_' only!
+              - name: departure
+                label: Abfahrtszeit
+                description: Please enter a time with format 'hh:mm' (08:34, 00:12, 19:45)
+                fieldType: text
+                validators:
+                  - name: time
+                    class: info.magnolia.ui.form.validator.definition.RegexpValidatorDefinition
+                    pattern: ([01]\d|2[0-3]):[0-5]\d
+                    errorMessage: Format Error! Please enter a time with format hh:mm (08:34, 00:12, 19:45)
+              - name: strecke
+                label: Strecke
+                description: Strecke wählen
+                class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                targetWorkspace: strecken
+                targetTreeRootPath: /
+                appName: strecken
+                identifierToPathConverter:
+                  class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+              - name: zugkomposition
+                label: Zugkomposition
+                description: Zugkomposition wählen
+                class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                targetWorkspace: zugkompositionen
+                targetTreeRootPath: /
+                appName: zugkompositionen
+                identifierToPathConverter:
+                  class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+
+    actions:
+      commit:
+        implementationClass: info.magnolia.ui.form.action.SaveFormAction
+        class: info.magnolia.ui.form.action.SaveFormActionDefinition
+      cancel:
+        class: info.magnolia.ui.form.action.CancelFormActionDefinition
+
+    contentConnector:
+      workspace: zugservices
+      rootPath: /
+      nodeTypes:
+        - icon: icon-jcr-app
+          name: zugservice
+          strict: true
+        - icon: icon-folder-l
+          name: mgnl:folder
+          strict: true
+
+

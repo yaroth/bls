@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" sv:name="wagentypen">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>mgnl:content</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:uuid" sv:type="String">
+    <sv:value>1c26382f-9d79-4346-99ff-825018ec4af4</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:created" sv:type="Date">
+    <sv:value>2019-10-29T20:52:31.490+01:00</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:createdBy" sv:type="String">
+    <sv:value>superuser</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+    <sv:value>2019-11-13T20:55:44.424+01:00</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+    <sv:value>superuser</sv:value>
+  </sv:property>
+  <sv:node sv:name="family">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>wagentyp</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>8f617e02-ef84-40f5-9d7e-47846120dd14</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2019-10-29T21:00:59.638+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2019-11-13T20:55:44.424+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="wagentyp" sv:type="String">
+      <sv:value>Wagen mit Familienabteil</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="bistro">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>wagentyp</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>6b1c5c39-ffb9-4d1a-9758-cfef40a39f14</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2019-10-29T21:01:29.329+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2019-11-13T20:55:44.424+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="wagentyp" sv:type="String">
+      <sv:value>Wagen mit Bistro / Restaurant</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="veloverlad">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>wagentyp</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>7c561192-4e11-4fcc-aaf2-0d27c45255ed</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2019-10-29T21:03:10.852+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2019-11-13T20:55:44.424+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="wagentyp" sv:type="String">
+      <sv:value>Wagen mit Veloverladmöglichkeit</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="ruhe">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>wagentyp</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>1eca04d7-8f1a-48c6-836f-3fbb77d299e5</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2019-10-29T21:03:22.814+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2019-11-13T20:55:44.424+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="wagentyp" sv:type="String">
+      <sv:value>Wagen mit Ruheabteil</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="normal">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>wagentyp</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>933e6161-fc67-4b06-aec2-811cc1c2624a</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2019-10-30T19:58:18.487+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2019-11-13T20:55:44.424+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="wagentyp" sv:type="String">
+      <sv:value>Normaler Wagen</sv:value>
+    </sv:property>
+  </sv:node>
+</sv:node>
+
