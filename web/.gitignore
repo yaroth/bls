@@ -1,0 +1,15 @@
+# intelliJ stuff
+.idea/
+*.iml
+
+# magnolia target
+target/
+
+# other magnolia stuff
+overlays
+
+# specific stuff
+package-lock.json
+
+# nodeJS
+node_modules/
