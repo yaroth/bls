@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" sv:name="wagen12">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>wagen</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:uuid" sv:type="String">
+    <sv:value>bf4a588a-4c92-4885-a68f-89ad2521322a</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:created" sv:type="Date">
+    <sv:value>2019-10-30T19:58:58.240+01:00</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:createdBy" sv:type="String">
+    <sv:value>superuser</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+    <sv:value>2019-11-13T22:03:37.389+01:00</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+    <sv:value>superuser</sv:value>
+  </sv:property>
+  <sv:property sv:name="number" sv:type="String">
+    <sv:value>12</sv:value>
+  </sv:property>
+  <sv:property sv:name="wagenplan" sv:type="String">
+    <sv:value>4751dad2-9b3b-487d-aa03-a5004f91b909</sv:value>
+  </sv:property>
+  <sv:property sv:name="wagentyp" sv:type="String" sv:multiple="true">
+    <sv:value>933e6161-fc67-4b06-aec2-811cc1c2624a</sv:value>
+  </sv:property>
+</sv:node>
+
