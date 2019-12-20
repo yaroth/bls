@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" sv:name="bern-interlaken">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>strecke</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:uuid" sv:type="String">
+    <sv:value>efe5067f-f2ee-4989-a562-867aeb37d1f7</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:created" sv:type="Date">
+    <sv:value>2019-10-29T22:49:52.772+01:00</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:createdBy" sv:type="String">
+    <sv:value>superuser</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+    <sv:value>2019-10-30T20:52:22.917+01:00</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+    <sv:value>superuser</sv:value>
+  </sv:property>
+  <sv:node sv:name="abschnitt0">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>7dae01ef-3428-482d-b9a4-40045ed118d8</sv:value>
+    </sv:property>
+    <sv:property sv:name="duration" sv:type="String">
+      <sv:value>15</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2019-10-29T22:51:58.049+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2019-10-30T20:58:08.793+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="stop" sv:type="String">
+      <sv:value>4628374c-9562-49bf-b4c9-47a8f084afc7</sv:value>
+    </sv:property>
+    <sv:property sv:name="stopduration" sv:type="String">
+      <sv:value>0</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="abschnitt1">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>16ee3d60-3f9d-4471-9cbc-61bf1076a75f</sv:value>
+    </sv:property>
+    <sv:property sv:name="duration" sv:type="String">
+      <sv:value>10</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2019-10-29T22:52:15.503+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2019-10-30T20:58:08.795+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="stop" sv:type="String">
+      <sv:value>b4c32435-b84d-4a26-b367-9ad6e84256d2</sv:value>
+    </sv:property>
+    <sv:property sv:name="stopduration" sv:type="String">
+      <sv:value>2</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="abschnitt2">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>c59200e0-cadc-407f-9cb8-edb10e70ebe4</sv:value>
+    </sv:property>
+    <sv:property sv:name="duration" sv:type="String">
+      <sv:value>8</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2019-10-29T22:53:04.325+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2019-10-30T20:58:08.795+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="stop" sv:type="String">
+      <sv:value>b302b893-2368-4ff9-b3d8-7e0583e2973d</sv:value>
+    </sv:property>
+    <sv:property sv:name="stopduration" sv:type="String">
+      <sv:value>5</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="abschnitt3">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>7cc5d4d0-68ae-438d-991e-ca9e2b3e81e2</sv:value>
+    </sv:property>
+    <sv:property sv:name="duration" sv:type="String">
+      <sv:value>21</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2019-10-29T22:58:37.094+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2019-10-30T20:58:08.796+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="stop" sv:type="String">
+      <sv:value>97692d80-364d-44af-9cd8-02bbfb1972fe</sv:value>
+    </sv:property>
+    <sv:property sv:name="stopduration" sv:type="String">
+      <sv:value>4</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="abschnitt4">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>ab76378b-f766-46a9-ab88-1e9b44ce0fc0</sv:value>
+    </sv:property>
+    <sv:property sv:name="duration" sv:type="String">
+      <sv:value>0</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2019-10-30T20:52:22.917+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2019-10-30T20:58:08.797+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="stop" sv:type="String">
+      <sv:value>4fbf0a5c-01bf-4f80-b305-8cf90776e1ad</sv:value>
+    </sv:property>
+    <sv:property sv:name="stopduration" sv:type="String">
+      <sv:value>0</sv:value>
+    </sv:property>
+  </sv:node>
+</sv:node>
+

@@ -1,0 +1,10 @@
+templateScript: /bls/templates/pages/dummy-page.ftl
+renderType: freemarker
+visible: true
+dialog: bls:pages/dummy-page-properties
+areas:
+  main:
+    renderType: freemarker
+    availableComponents:
+      dummy-component:
+        id: bls:components/dummy-component

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module SYSTEM "module.dtd" >
+<module>
+    <name>bls</name>
+    <displayName>${project.name}</displayName>
+    <description>${project.description}</description>
+    <class>ch.yaro.bls.BlsModule</class>
+    <versionHandler>ch.yaro.bls.setup.BlsModuleVersionHandler</versionHandler>
+    <version>${project.version}</version>
+
+    <!-- For more information on module descriptor configuration options -->
+    <!-- https://documentation.magnolia-cms.com/display/DOCS/XML-based+module+descriptor -->
+
+    <components>
+        <id>main</id>
+        <component>
+            <type>ch.yaro.bls.rest.pojos.BlsPojoService</type>
+            <implementation>ch.yaro.bls.rest.pojos.BlsPojoService</implementation>
+            <scope>singleton</scope>
+        </component>
+        <!--<type-mapping>
+            <type>info.magnolia.documentation.apps.cameracollection.imageprovider.DamLinkFromListImageProviderDefinition</type>
+            <implementation>info.magnolia.documentation.apps.cameracollection.imageprovider.ConfiguredDamLinkFromListImageProviderDefinition</implementation>
+        </type-mapping>-->
+    </components>
+
+
+    <dependencies>
+        <dependency>
+            <name>core</name>
+            <version>*</version>
+        </dependency>
+        <!--  Add other dependencies here, e.g the mte (magnolia templating essentials).
+        <dependency>
+          <name>mte</name>
+          <version>0.7/*</version>
+        </dependency>
+        -->
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <name>magnolia</name>
+            <workspaces>
+                <workspace>news</workspace>
+                <workspace>wagen</workspace>
+                <workspace>haltestelle</workspace>
+                <workspace>strecken</workspace>
+                <workspace>zugkompositionen</workspace>
+                <workspace>zugservices</workspace>
+                <workspace>reservation</workspace>
+            </workspaces>
+            <nodeTypeFile>/mgnl-nodetypes/magnolia-bls-nodetypes.xml</nodeTypeFile>
+        </repository>
+    </repositories>
+
+</module>

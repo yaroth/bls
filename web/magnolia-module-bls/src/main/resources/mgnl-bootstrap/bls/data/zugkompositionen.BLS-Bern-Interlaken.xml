@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" sv:name="BLS-Bern-Interlaken">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>zugkomposition</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:uuid" sv:type="String">
+    <sv:value>d94e4409-a602-46c1-a6eb-488fa2405a57</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:created" sv:type="Date">
+    <sv:value>2019-10-30T20:38:08.353+01:00</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:createdBy" sv:type="String">
+    <sv:value>superuser</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+    <sv:value>2019-11-13T20:25:44.525+01:00</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+    <sv:value>superuser</sv:value>
+  </sv:property>
+  <sv:property sv:name="name" sv:type="String">
+    <sv:value>BLS Bern-Interlaken</sv:value>
+  </sv:property>
+  <sv:property sv:name="wagen" sv:type="String" sv:multiple="true">
+    <sv:value>8989382e-4016-4d9d-9ff7-1b5cd71ca42c</sv:value>
+    <sv:value>96e28d17-aebe-43da-9d31-7193e5d56a6b</sv:value>
+    <sv:value>bf4a588a-4c92-4885-a68f-89ad2521322a</sv:value>
+  </sv:property>
+</sv:node>
+

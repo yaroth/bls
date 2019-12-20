@@ -1,0 +1,428 @@
+label: Wägen
+icon: icon-contents
+appClass: info.magnolia.ui.contentapp.ContentApp
+class: info.magnolia.ui.contentapp.ConfiguredContentAppDescriptor
+subApps:
+  browser:
+    subAppClass: info.magnolia.ui.contentapp.browser.BrowserSubApp
+    class: info.magnolia.ui.contentapp.browser.BrowserSubAppDescriptor
+    label: Wägen
+    actions:
+      addWagen:
+        subAppId: detail
+        label: Add Wagen
+        icon: icon-add-item
+        nodeType: wagen
+        appName: waegen
+        class: info.magnolia.ui.contentapp.detail.action.CreateItemActionDefinition
+        availability:
+          writePermissionRequired: true
+          root: true
+          nodeTypes:
+            folder: mgnl:folder
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      editWagen:
+        subAppId: detail
+        label: Edit Wagen
+        icon: icon-edit
+        appName: waegen
+        class: info.magnolia.ui.contentapp.detail.action.EditItemActionDefinition
+        availability:
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+          nodeTypes:
+            wagen: wagen
+      move:
+        icon: icon-move
+        class: info.magnolia.ui.contentapp.movedialog.action.OpenMoveDialogActionDefinition
+        availability:
+          multiple: true
+          properties: true
+      delete:
+        command: markAsDeleted
+        class: info.magnolia.ui.framework.action.MarkNodeAsDeletedActionDefinition
+        availability:
+          writePermissionRequired: true
+      addFolder:
+        icon: icon-add-folder
+        class: info.magnolia.ui.framework.action.AddFolderActionDefinition
+        availability:
+          writePermissionRequired: true
+          root: true
+          nodeTypes:
+            - mgnl:folder
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      editFolder:
+        dialogName: ui-framework:folder
+        icon: icon-edit
+        class: info.magnolia.ui.framework.action.OpenEditDialogActionDefinition
+        availability:
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      renameWagen:
+        icon: icon-edit
+        label: Rename Wagen Item
+        dialogName: wagen:renameWagen
+        class: info.magnolia.ui.framework.action.OpenEditDialogActionDefinition
+        availability:
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      activate:
+        command: activate
+        icon: icon-publish
+        catalog: versioned
+        class: info.magnolia.ui.framework.action.ActivationActionDefinition
+        availability:
+          multiple: true
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      deactivate:
+        command: deactivate
+        icon: icon-unpublish
+        catalog: versioned
+        class: info.magnolia.ui.framework.action.DeactivationActionDefinition
+        availability:
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+            - name: IsPublishedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsPublishedRule
+      export:
+        command: export
+        icon: icon-export
+        class: info.magnolia.ui.framework.action.ExportActionDefinition
+        availability:
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      import:
+        icon: icon-import
+        dialogName: ui-admincentral:import
+        name: import
+        class: info.magnolia.ui.framework.action.OpenCreateDialogActionDefinition
+        availability:
+          writePermissionRequired: true
+          root: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      restorePreviousVersion:
+        icon: icon-undo
+        class: info.magnolia.ui.contentapp.detail.action.RestorePreviousVersionActionDefinition
+        availability:
+          writePermissionRequired: true
+          rules:
+            - name: IsDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsDeletedRule
+      activateDeleted:
+        command: activate
+        icon: icon-publish
+        catalog: versioned
+        class: info.magnolia.ui.framework.action.ActivationActionDefinition
+        availability:
+          writePermissionRequired: true
+          rules:
+            - name: IsDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsDeletedRule
+      confirmDeleteWagen:
+        successActionName: delete
+        label: Delete
+        icon: icon-delete
+        class: info.magnolia.ui.framework.action.ConfirmationActionDefinition
+        confirmationHeader: Do you really want to delete the selected item?
+        confirmationMessage: Deleting the selected item cannot be undone. Do you want to proceed?
+        proceedLabel: Delete
+        cancelLabel: Cancel
+        availability:
+          multiple: true
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      confirmDeleteFolder:
+        icon: icon-delete
+        successActionName: delete
+        class: info.magnolia.ui.framework.action.ConfirmationActionDefinition
+        availability:
+          multiple: true
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      confirmDeleteItems:
+        icon: icon-delete
+        successActionName: delete
+        class: info.magnolia.ui.framework.action.ConfirmationActionDefinition
+        availability:
+          multiple: true
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      showVersions:
+        icon: icon-show-versions
+        class: info.magnolia.ui.contentapp.browser.action.ShowVersionsActionDefinition
+        availability:
+          rules:
+            - name: HasVersionsRule
+              implementationClass: info.magnolia.ui.framework.availability.HasVersionsRule
+      restoreVersion:
+        icon: icon-retrieve-versions
+        class: info.magnolia.ui.contentapp.browser.action.RestoreVersionActionDefinition
+        availability:
+          writePermissionRequired: true
+          rules:
+            - name: HasVersionsRule
+              implementationClass: info.magnolia.ui.framework.availability.HasVersionsRule
+
+    actionbar:
+      defaultAction: editWagen
+      sections:
+        - name: root
+          label: Root
+          groups:
+            - name: addActions
+              items:
+                - name: addWagen
+                - name: addFolder
+            - name: importExportActions
+              items:
+                - name: import
+          availability:
+            nodes: false
+            root: true
+        - name: deletedWagen
+          groups:
+            - name: addActions
+              items:
+                - name: addWagen
+                - name: confirmDeleteWagen
+            - name: editActions
+              items:
+                - name: editWagen
+                - name: renameWagen
+            - name: activationActions
+              items:
+                - name: activateDeleted
+                - name: deactivate
+            - name: importExportActions
+              items:
+                - name: export
+            - name: deletedActions
+              items:
+                - name: restorePreviousVersion
+          availability:
+            nodeTypes:
+              wagen: wagen
+            rules:
+              - name: IsDeletedRule
+                implementationClass: info.magnolia.ui.framework.availability.IsDeletedRule
+        - name: deletedFolder
+          groups:
+            - name: addActions
+              items:
+                - name: addWagen
+                - name: addFolder
+                - name: confirmDeleteFolder
+            - name: editActions
+              items:
+                - name: editFolder
+            - name: activationActions
+              items:
+                - name: activateDeleted
+                - name: deactivate
+            - name: importExportActions
+              items:
+                - name: export
+                - name: import
+            - name: deletedActions
+              items:
+                - name: restorePreviousVersion
+          availability:
+            nodeTypes:
+              mgnl-folder: mgnl:folder
+            rules:
+              - name: IsDeletedRule
+                implementationClass: info.magnolia.ui.framework.availability.IsDeletedRule
+        - name: wagen
+          label: Wagen
+          groups:
+            - name: addActions
+              items:
+                - name: addWagen
+                - name: confirmDeleteWagen
+            - name: editActions
+              items:
+                - name: editWagen
+                - name: renameWagen
+                - name: move
+            - name: activationActions
+              items:
+                - name: activate
+                - name: deactivate
+            - name: importExportActions
+              items:
+                - name: export
+            - name: versionsActions
+              items:
+                - name: showVersions
+                - name: restoreVersion
+          availability:
+            nodeTypes:
+              wagen: wagen
+        - name: folder
+          groups:
+            - name: addActions
+              items:
+                - name: addWagen
+                - name: addFolder
+                - name: confirmDeleteFolder
+            - name: editActions
+              items:
+                - name: editFolder
+                - name: move
+            - name: activationActions
+              items:
+                - name: activate
+                - name: deactivate
+            - name: importExportActions
+              items:
+                - name: export
+                - name: import
+          availability:
+            nodeTypes:
+              mgnl-folder: mgnl:folder
+        - name: multiple
+          groups:
+            - name: deleteActions
+              items:
+                - name: confirmDeleteItems
+            - name: activationActions
+              items:
+                - name: activate
+                - name: deactivate
+            - name: importExportActions
+              items:
+                - name: export
+    workbench:
+      editable: false
+      contentViews:
+        - name: tree
+          class: info.magnolia.ui.workbench.tree.TreePresenterDefinition
+          columns: &myColumns
+            - name: jcrName
+              editable: true
+              sortable: true
+              propertyName: jcrName
+              expandRatio: 1.0
+              class: info.magnolia.ui.workbench.column.definition.PropertyColumnDefinition
+            - name: number
+              label: Nummer
+              editable: true
+              sortable: true
+              propertyName: number
+              expandRatio: 1.0
+              class: info.magnolia.ui.workbench.column.definition.PropertyColumnDefinition
+            - name: status
+              width: 45
+              displayInChooseDialog: false
+              formatterClass: info.magnolia.ui.workbench.column.StatusColumnFormatter
+              class: info.magnolia.ui.workbench.column.definition.StatusColumnDefinition
+            - name: moddate
+              width: 160
+              sortable: true
+              displayInChooseDialog: false
+              formatterClass: info.magnolia.ui.workbench.column.DateColumnFormatter
+              propertyName: mgnl:lastModified
+              class: info.magnolia.ui.workbench.column.definition.MetaDataColumnDefinition
+        - name: list
+          class: info.magnolia.ui.workbench.list.ListPresenterDefinition
+          columns: *myColumns
+        - name: thumbnail
+          class: info.magnolia.ui.workbench.thumbnail.ThumbnailPresenterDefinition
+        - name: search
+          class: info.magnolia.ui.workbench.search.SearchPresenterDefinition
+          columns: *myColumns
+    imageProvider:
+     class: info.magnolia.dam.app.ui.imageprovider.DamLinkImageProviderDefinition
+     damLinkPropertyName: image
+    contentConnector:
+      includeProperties: false
+      workspace: wagen
+      rootPath: /
+      defaultOrder: jcrName
+      nodeTypes:
+        - icon: icon-contents
+          name: wagen
+        - icon: icon-folder-l
+          name: mgnl:folder
+
+  detail:
+    subAppClass: info.magnolia.ui.contentapp.detail.DetailSubApp
+    class: info.magnolia.ui.contentapp.detail.DetailSubAppDescriptor
+    editor:
+      nodeType:
+        icon: icon-node-content
+        name: wagen
+      actions:
+        - name: commit
+        - name: cancel
+      form:
+        tabs:
+          - name: wagen
+            label: Wagen detail
+            fields:
+              - name: jcrName
+                label: JCRName
+                required: true
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+              - name: number
+                label: Nummer
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                validators:
+                  - name: number
+                    class: info.magnolia.ui.form.validator.definition.RegexpValidatorDefinition
+                    pattern: \d+
+                    errorMessage: Format Error! Please enter a number only!
+              - name: wagenplanID
+                label: Wagenplan
+                class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                targetWorkspace: category
+                targetTreeRootPath: /wagenplaene
+                appName: wagenplaene
+                identifierToPathConverter:
+                  class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+
+
+    actions:
+      commit:
+        implementationClass: info.magnolia.ui.form.action.SaveFormAction
+        class: info.magnolia.ui.form.action.SaveFormActionDefinition
+      cancel:
+        class: info.magnolia.ui.form.action.CancelFormActionDefinition
+
+    contentConnector:
+      workspace: wagen
+      rootPath: /
+      nodeTypes:
+        - icon: icon-contents
+          name: wagen
+          strict: true
+        - icon: icon-folder-l
+          name: mgnl:folder
+          strict: true
+
+
