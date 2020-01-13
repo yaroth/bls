@@ -45,11 +45,6 @@
             </dependency>
             -->
 
-            <dependency>
-                <groupId>ch.yaro</groupId>
-                <artifactId>magnolia-module-bls</artifactId>
-                <version>1.0-SNAPSHOT</version>
-            </dependency>
 
             <dependency>
                 <groupId>info.magnolia.rest</groupId>
@@ -73,6 +68,12 @@
                 <groupId>com.fasterxml.jackson.datatype</groupId>
                 <artifactId>jackson-datatype-jsr310</artifactId>
                 <version>2.9.9</version>
+            </dependency>
+
+            <dependency>
+                <groupId>ch.yaro</groupId>
+                <artifactId>magnolia-module-bls</artifactId>
+                <version>1.0-SNAPSHOT</version>
             </dependency>
 
         </dependencies>
@@ -135,7 +136,7 @@
     </repositories>
 
     <modules>
-        <module>bls-webapp</module>
         <module>magnolia-module-bls</module>
+        <module>bls-webapp</module>
     </modules>
 </project>
